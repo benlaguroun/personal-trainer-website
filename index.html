@@ -10,6 +10,7 @@
     />
 
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/services.css" />
     <link rel="stylesheet" href="css/programs.css" />
@@ -19,36 +20,65 @@
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
-    <header id="header">
-      <div class="logo">
-        <img src="images/logo.png" alt="Fitness Club" />
+    <section id="Hero">
+      <header id="header">
+        <div class="logo">
+          <img src="images/logo.png" alt="Fitness Club for Girls Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="#services"><i class="fas fa-dumbbell"></i> Services</a>
+            </li>
+            <li>
+              <a href="#programs"><i class="fas fa-heartbeat"></i> Programs</a>
+            </li>
+            <li>
+              <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+            </li>
+            <li>
+              <a href="#testimonials"
+                ><i class="fas fa-comments"></i> Testimonials</a
+              >
+            </li>
+            <li>
+              <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+      </header>
+
+      <div class="carousel">
+        <div class="slide active">
+          <img src="images/slide1.jpg" alt="Slide 1" />
+          <div class="caption">
+            <h1>Welcome to Fitness Club</h1>
+            <p>Empowering girls to lead healthier lives!</p>
+            <a href="#contact" class="cta-button">Join Us Now</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/slide2.jpg" alt="Slide 2" />
+          <div class="caption">
+            <h1>Join Our Programs</h1>
+            <p>Yoga, Cardio, Strength Training, and more!</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/slide3.jpg" alt="Slide 3" />
+          <div class="caption">
+            <h1>Transform Your Lifestyle</h1>
+            <p>Feel confident and strong every day!</p>
+            <a href="#contact" class="cta-button">Learn More</a>
+          </div>
+        </div>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
-          </li>
-          <li>
-            <a href="#services"><i class="fas fa-dumbbell"></i> Services</a>
-          </li>
-          <li>
-            <a href="#programs"><i class="fas fa-heartbeat"></i> Programs</a>
-          </li>
-          <li>
-            <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
-          </li>
-          <li>
-            <a href="#testimonials"
-              ><i class="fas fa-comments"></i> Testimonials</a
-            >
-          </li>
-          <li>
-            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <button id="menu-toggle"><i class="fas fa-bars"></i></button>
-    </header>
+    </section>
 
     <section id="about">
       <!-- About section content -->
