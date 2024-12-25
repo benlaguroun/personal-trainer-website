@@ -1,4 +1,4 @@
-// Example: Smooth scroll to sections
+// Smooth scroll to sections
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -8,38 +8,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Toggle the mobile menu
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.querySelector("#header nav").classList.toggle("active");
-});
-
-// Sticky Header
-window.addEventListener("scroll", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
-  const hero = document.getElementById("Hero");
-  const heroHeight = hero.offsetHeight;
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = header.querySelector("nav ul");
 
-  if (window.scrollY > heroHeight) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-});
+  // Debugging: Ensure elements are selected correctly
+  console.log("Menu Toggle:", menuToggle);
+  console.log("Nav Menu:", navMenu);
 
-// Carousel Logic
-let currentSlide = 0;
-const slides = document.querySelectorAll(".carousel .slide");
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === index);
+  // Change header background on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      header.classList.add("solid");
+      header.classList.remove("transparent");
+    } else {
+      header.classList.add("transparent");
+      header.classList.remove("solid");
+    }
   });
-}
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Automatically change slides every 5 seconds
-setInterval(nextSlide, 5000);
+  // Toggle mobile menu visibility
+  menuToggle.addEventListener("click", () => {
+    console.log("Menu Toggle Clicked"); // Debugging log
+    navMenu.classList.toggle("show");
+    console.log("Nav Menu Classes:", navMenu.classList); // Debugging log
+  });
+});
