@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Library</title>
+    <link rel="stylesheet" href="/frontend/pages/styles/exercises.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Fitness Club Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="exercise-library">
+      <h1>Exercise Library</h1>
+      <div class="exercise-grid">
+        <!-- Individual exercise cards -->
+        <div class="exercise-card" data-video="videos/exercise1.mp4">
+          <img src="images/exercise1.jpg" alt="Exercise 1" />
+          <h2>Push-Up</h2>
+          <p>A classic upper-body strength-building exercise.</p>
+          <button class="watch-button">Watch</button>
+        </div>
+
+        <div class="exercise-card" data-video="videos/exercise2.mp4">
+          <img src="images/exercise2.jpg" alt="Exercise 2" />
+          <h2>Squat</h2>
+          <p>Builds lower body strength and core stability.</p>
+          <button class="watch-button">Watch</button>
+        </div>
+
+        <div class="exercise-card" data-video="videos/exercise3.mp4">
+          <img src="images/exercise3.jpg" alt="Exercise 3" />
+          <h2>Plank</h2>
+          <p>Excellent for improving core strength and stability.</p>
+          <button class="watch-button">Watch</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="video-player">
+      <video controls id="exercise-video">
+        <source src="" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button id="close-video">Close</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Fitness Club for Girls. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/frontend/js/exercises.js"></script>
+  </body>
+</html>
